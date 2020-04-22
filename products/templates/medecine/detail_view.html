@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="row">
+     <div class="col-6 col-md-6">
+{%if object.image%}
+<img src="{{object.image.url}}" alt="" class="img-fluid">
+{%endif%}
+<h3>{{object.description}}</h3><br>
+   </div>
+ <div class="col-6 col-md-6">
+     {%include 'medecine/snippets/update_cart.html' with product=object cart=cart%}
+<!--    <h2><a href="">Add to cart</a></h2>-->
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Bootstrap Tutorial</h1>
+    <p>Bootstrap is the most popular HTML, CSS...</p>
+  </div>
+</div>
+<div class="container" >
+  <div class="row">
+  <div class="col-sm-3 sidenav "  >
+  <ul >
+   <a href=""> <li >First item</li></a> 
+    <a href=""><li >Second item</li></a>
+   <a href=""><li >Third item</li></a> 
+   <a href=""><li >Third item</li></a> 
+  </ul>
+    </div>
+
+      <div class="col-sm-9  "  >
+ <div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3 sidenav "  >
+  <ul >
+   <a href=""> <li >First item</li></a> 
+    <a href=""><li >Second item</li></a>
+   <a href=""><li >Third item</li></a> 
+   <a href=""><li >Third item</li></a> 
+  </ul>
+    </div>
+
+        
+<div id="section2" class="col-sm-9 col-lg-9 col-md-9 container  " style="padding:20px; display: inline">
+ <div class="row">
+  <div class="col-sm-12">
+  {% for obj in object_list%}
+        
+            {{forloop.counter}}
+{% include 'medecine/snippets/card.html' with instance=obj%}
+  
+{%endfor%}
+   </div>
+
+  </div>
+</div>
+
+
+
+
+ 
+   {%endblock%}
+
+</html>

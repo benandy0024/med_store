@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{%block content%}
+<div class="container">
+
+    <div class="row">
+            <div class="col">
+                <h1>Category</h1>
+            {%for item in cat%}
+                <b> {{forloop.counter}}
+                    {{item}}</b><br>
+
+            {%for category in item.product_set.all%}
+                <a href="{{category.get_absolute_url}}">.{{category}}</a><br>
+            {%endfor%}
+
+            {%endfor%}
+            </div>
+{% for obj in qs%}
+        <div class="col">
+<!--            {{forloop.counter}}-->
+{% include 'medecine/snippets/card.html' with instance=obj%}
+            {%if forloop.counter|divisibleby:2%}
+        </div></div><div class="row"> <div class="col-12">
+    <hr/></div>
+        {%else%}
+</div>
+        {%endif%}
+{%endfor%}
+    </div>
+</div>
+{%endblock%}

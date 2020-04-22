@@ -1,0 +1,132 @@
+<!-- 
+
+
+<div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+   <div class="card-img-overlay d-flex justify-content-end">
+          <a href="#" class="card-link text-danger like">
+            <i class="fas fa-heart"></i>
+          </a>
+     </div>
+      <div class="card">
+    {%if instance.image%}
+  <a href="{{instance.get_absolute_url}}"><img src="{{instance.image.url}}" class="card-img-top" alt="{{instance.title}} logo"></a>
+    {%endif%}
+
+
+  <div class="card-body">
+    <h4 class="card-title">{{instance.title}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
+          <p class="card-text">
+           {{instance.description}}
+       </p>
+    <!-- <a href="{{instance.get_absolute_url}}" class="btn btn-primary">View</a>
+ -->    <!--  <div class="options d-flex flex-fill">
+        
+          <form action="{%url 'carts:update' instance.slug %}">
+			      <div class="form-group">
+
+			   <input type="number" name="qty" value="1" style="width:10%">
+			    <input class="btn btn-success" type="submit" value="Add to cart">
+			   </div>
+        
+
+   <div class="buy d-flex justify-content-between align-items-center">
+            <div class="price text-success"><h5 class="mt-4">${{instance.price}}</h5></div>
+            
+    </div>
+
+    </form>
+          </div>
+  </div>
+</div>
+</div>
+</div> -->
+<div class="row">
+	<div class="col-m-9">
+<div class="card" style="width: 200px;">
+   {%if instance.image%}
+  <a href="{{instance.get_absolute_url}}"><img src="{{instance.image.url}}" class="card-img-top img-thumbnail responsive" alt="{{instance.title}} logo" style="width:200px;"></a>
+    {%endif%}
+  <div class="card-body">
+    <h5 class="card-title"><b>{{instance.title}}</b></h5>
+    <p class="card-text">${{instance.price}}</p>
+     <a href="{{instance.get_absolute_url}}" class="btn " style="background-color: #16a085;color: 
+     #fff;">Add to Cart</a>
+    <!--     <form action="{%url 'carts:update' instance.slug %}">
+			      <div class="form-group">
+			      		<label><h5>Product Qty</h5></label>
+			   <input type="number" name="qty" value="1" style="width:100px;">
+			     <input class="btn btn-success" type="submit" value="Add to cart">
+			    <button class="btn btn-primary" type="submit">Add to Cart</button>
+			   </div>
+
+    </form> --> 
+  </div>
+</div>
+</div>
+</div>
+
+<!-- <div class="card" style="width: 20%;height: 100%;">
+	 {%if instance.image%}
+ <a href="{{instance.get_absolute_url}}"><img src="{{instance.image.url}}" class="card-img-top" alt="{{instance.title}} logo"></a>
+     {%endif%}
+  <h1>{{instance.title}}</h1>
+  <p class="price">${{instance.price}}</p>
+  <p>{{instance.description}}</p>
+  <a href="{{instance.get_absolute_url}}"><p><button >Add to Cart</button></p></a>
+    <form action="{%url 'carts:update' instance.slug %}">
+			      <div class="form-group">
+
+			   <input type="number" name="qty" value="1" style="width:10%">
+			    <input class="btn btn-success" type="submit" value="Add to cart">
+			   </div>
+
+    </form>
+</div>
+
+ -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        {%if instance.image%}
+ <a href="{{instance.get_absolute_url}}"><img src="{{instance.image.url}}" class="card-img-top" alt="{{instance.title}} logo"></a>
+  {%endif%}
+        <div class="card-img-overlay d-flex justify-content-end">
+          <a href="#" class="card-link text-danger like">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{instance.title}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
+          <p class="card-text">
+           {{instance.description}}
+       </p>
+          <div class="options d-flex flex-fill">
+             <select class="custom-select mr-1">
+                <option selected>Color</option>
+                <option value="1">Green</option>
+                <option value="2">Blue</option>
+                <option value="3">Red</option>
+            </select>
+          <form action="{%url 'carts:update' instance.slug %}">
+			      <div class="form-group">
+
+			   <input type="number" name="qty" value="1" style="width:10%">
+			    <input class="btn btn-success" type="submit" value="Add to cart">
+			   </div>
+        </form>
+          </div>
+          <div class="buy d-flex justify-content-between align-items-center">
+            <div class="price text-success"><h5 class="mt-4">${{instance.price}}</h5></div>
+             <a href="{{instance.get_absolute_url}}" class="btn btn-danger mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

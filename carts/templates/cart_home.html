@@ -1,0 +1,95 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+
+  <div class="row">
+      <!-- first collumn show items -->
+    <div class="col-sm-8 col-md-8 col-lg-8">
+        <div class="alert " role="alert" style="min-height: 200px;margin-top:50px;background-color: #fff;">
+                    <p><h3>Shopping Cart</h3></p>
+                    <hr>
+          <div class="col" >
+            {%if cart.cartitem_set.exists%}
+             <table class="table table-borderless" >
+ 
+    <tbody>
+      <tr>
+          {%for prod in cart.cartitem_set.all%}
+          <td><img src="{{prod.products.image.url}}" style="width: 100px;"></td>
+        <td>{{prod.products}} <br>
+         <p> <h6 style="color: green;">${{prod.products.price}} </h6><hr> 
+         </p>
+
+        </td>
+
+        <td>{{prod.quantity}}</td>
+        <td >
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <a href="{%url 'carts:update' prod.products.slug%}?qty=0">remove</a></td>
+
+        <td class="glyphicon glyphicon-shopping-cart"></td>
+      </tr>
+        {%endfor%}
+
+    </tbody>
+  </table>
+
+  {% else %}
+<p class="lead"> <h5>Cart is empty </h5></p>
+
+{%endif%}
+ <a href=" " class="btn " style="background-color: #16a085;color: 
+     #fff;">Continue shopping<a/>
+          </div>
+        </div>
+    </div>
+
+      <!-- first row show items and total price  -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div div class="alert " role="alert" style="min-height: 200px;margin-top:50px;background-color: #fff;">
+           <div class="row">
+                  <div class="col-sm-1 col-md-1 col-lg">
+                    <p>{{request.session.cart_items}} Items</p>
+                    <br>  
+                    <p> Tax</p>
+                  </div>
+                  <div class="col">
+                 <p style="color: green;" class="text-right"><span class="cart-subtotal"> <b> ${{cart.total}}</b></span></p>
+                 <br>   
+
+                  <p style="color: green;" class="text-right"><span class="cart-subtotal"> <b> $0.00</b></span></p>                 
+               </div>
+
+            </div>
+          <hr>
+
+            <div class="row">
+                  <div class="col-sm-1 col-md-1 col-lg">
+                    <p>Total</p>
+                  </div>
+                  <div class="col">
+                 <p style="color: green;" class="text-right"><span class="cart-subtotal"> <b> ${{cart.total}}</b></span></p>                   
+               </div>
+
+            </div>
+                  <hr>      
+                <div class="row">
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                 <a  href="{%url 'carts:checkout'%}">
+                  <button class="btn  btn-dark" style="margin-left: 95px;" >Checkout</button>
+                 </a>
+
+               </div>
+
+            </div>
+              
+
+
+      </div>
+
+    </div>
+  </div>
+
+   
+</div>
+{%endblock%}
