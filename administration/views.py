@@ -5,8 +5,8 @@ from products.models import Product
 # Create your views here.
 def home(request):
     return render(request,'administration/home.html')
-# def index(request):
-#     return render(request,'administration/home.html')
+def view_order(request):
+    return render(request,'administration/home.html')
 
 class ProductListView(ListView):
     template_name ='administration/list_product.html'
