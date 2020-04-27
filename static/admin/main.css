@@ -125,7 +125,7 @@ body {
 	padding: 0;
 	padding-top: 44px;
 	height: 100%;
-	overflow: scroll;
+	
 }
 .main-content .title {
 	background-color: #eef1f7;
@@ -134,6 +134,12 @@ body {
 	font-weight: 700;
 	color: #333;
 	font-size: 18px;
+
+}
+.my_card{
+	width: 50%;
+	left: 500px;
+	background-color: red;
 }
 /* set element styles to fit tablet and higher(desktop) */
 @media screen and (min-width: 600px) {
@@ -169,6 +175,9 @@ body {
 	}
 	.side-nav ul li a {
 		text-align: center;
+	}
+	.card{
+		left:700px;
 	}
 	.main-content {
 		margin-left: 70px;

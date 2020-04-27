@@ -1,7 +1,8 @@
 {% extends 'admin_base.html'%}
 {%block content%}
 {% load crispy_forms_tags %}
-<div class="container">
+
+<!-- <div class="main-content">
     <div class="row">
         <div class="col-6">
              <form action=""method="post" enctype="multipart/form-data">
@@ -12,5 +13,60 @@
         </div>
     </div>
 
-</div>
+</div> -->
+<style type="text/css">
+	.card{
+		width:50%;
+		left:400px;
+	}
+	@media screen and (min-width: 600px) {
+		.container{
+			background-color: red;
+			
+			left: 100px;
+
+		}
+		.card{
+		width:60%;
+		left:150px;
+	}
+	}
+	@media screen and (min-width: 800px) {
+		.card{
+		width:50%;
+		left:400px;
+	}
+	}
+	@media screen and (min-width: 300px) {
+		.card{
+		width:90%;
+		left:20px;
+		
+	}
+
+	}
+</style>
+
+	<div class="main-content">
+			<div class="title">
+				Add Product
+			</div>
+			
+			<div class="main">
+				<div class="widget1">
+			 <div class="row">
+        <div class="col-md-6 col-6-lg col-6-sm">
+        	<h4>Product category</h4>
+        	<hr>
+             <form action=""method="post" enctype="multipart/form-data"style="left: 500px;">
+                {%csrf_token%}
+                {{form|crispy}}
+                <button class="btn btn-success my-3" type="submit">Add</button>
+            </form>
+        </div>
+        </div>
+				
+			</div>
+		</div>
+
 {%endblock %}

@@ -26,7 +26,7 @@ url('accounts/', include(("accounts.urls",'accounts'),namespace='accounts')),
 url('products/', include(("products.urls",'products'),namespace='products')),
 url('carts/', include(("carts.urls",'carts'),namespace='carts')),
 url('', include(("Billing.urls",'Billing'),namespace='Billing')),
-url('admin_panel', include(("administration.urls",'administration'),namespace='administration')),
+url('admin_panel/', include(("administration.urls",'administration'),namespace='administration')),
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>B-MedStore</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
      {% load staticfiles %}
-     <link rel="stylesheet" type="text/css" href="{%static 'admin/main.css'%}">
+     <link rel="stylesheet" type="text/css" href="{%static 'admin/index.css'%}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -17,6 +17,8 @@
 
 
 </head>
+<body>
+   {% include 'administration/admin_base_head.html'%}
 
       {%block content%}
     {% endblock %}

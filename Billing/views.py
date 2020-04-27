@@ -35,3 +35,5 @@ def payment_method_create_view(request):
     if request.method=="POST" and request.is_ajax():
         return JsonResponse({"message:done"})
     return HttpResponse("error")
+
+
